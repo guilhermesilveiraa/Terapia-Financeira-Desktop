@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.terapia.financeira.controller.GoalsController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </padding>
+    <children>
+        <Label text="Inserir Nova Meta" style="-fx-font-size: 20; -fx-font-weight: bold;" />
+        
+        <!-- Campo para Título -->
+        <VBox spacing="5">
+            <Label text="Título:" />
+            <TextField fx:id="txtTitle" promptText="Digite o título da meta" />
+        </VBox>
+        
+        <!-- Campo para Tipo -->
+        <VBox spacing="5">
+            <Label text="Tipo:" />
+            <ComboBox fx:id="cmbType" promptText="Selecione o tipo">
+                <!-- Adicione valores programaticamente ou diretamente no controlador -->
+            </ComboBox>
+        </VBox>
+        
+        <!-- Campo para Valor Total -->
+        <VBox spacing="5">
+            <Label text="Valor Total:" />
+            <TextField fx:id="txtGoalTotalValue" promptText="Digite o valor total" />
+        </VBox>
+        
+        <!-- Campo para Valor Alcançado -->
+        <VBox spacing="5">
+            <Label text="Valor Alcançado:" />
+            <TextField fx:id="txtValueAchieved" promptText="Digite o valor alcançado" />
+        </VBox>
+        
+        <!-- Botões -->
+        <HBox alignment="CENTER" spacing="10">
+            <Button text="Salvar" fx:id="btnSave" onAction="#handleSave" />
+            <Button text="Cancelar" fx:id="btnCancel" onAction="#handleCancel" />
+        </HBox>
+    </children>
+</VBox>

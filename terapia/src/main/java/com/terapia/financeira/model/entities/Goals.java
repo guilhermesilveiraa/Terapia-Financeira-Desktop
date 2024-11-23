@@ -7,6 +7,7 @@ import java.util.Objects;
 public class Goals implements Serializable{
     private static final long serialVersionUID = 1L;
     
+    private Integer id;
     private String title;
     private Integer type;
     private double goalTotalValue;
@@ -16,19 +17,34 @@ public class Goals implements Serializable{
 
     }
 
+    @SuppressWarnings("OverridableMethodCallInConstructor")
     public Goals(String title, Integer type, double goalTotalValue, double valueAchieved){
+        setTitle(title);
+        setGoalTotalValue(goalTotalValue);
+        setValueAchieved(valueAchieved);
+    }
+
+
+    public Goals(Integer id, String title, Integer type, double goalTotalValue, double valueAchieved){
+        this.id = id;
         this.title = title;
         this.type = type;
         this.goalTotalValue = goalTotalValue;
         this.valueAchieved = valueAchieved;
     }
 
-    
+    public Integer getId(){
+        return id;
+    }
+
+    public void setId(Integer id){
+        this.id = id;
+    }
+
     public String getTitle(){
         return title;
     }
 
-    
     public void setTitle(String title){
         this.title = title;
     }
@@ -68,7 +84,8 @@ public class Goals implements Serializable{
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, type);
+        return Objects.hash(title, id);
     }
 
+    
 }
