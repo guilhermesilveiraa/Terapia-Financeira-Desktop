@@ -3,6 +3,7 @@
 /home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/App.java
 /home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/model/dao/GoalsDao.java
 /home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/model/dao/DaoFactory.java
+/home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/controller/MainController.java
 /home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/db/DataBase.java
 /home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/controller/GoalsController.java
 /home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/db/DbIntegrityException.java
