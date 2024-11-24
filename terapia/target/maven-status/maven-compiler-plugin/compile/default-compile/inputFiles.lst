@@ -1,0 +1,10 @@
+/home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/model/entities/Goals.java
+/home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/db/DbException.java
+/home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/App.java
+/home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/model/dao/GoalsDao.java
+/home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/model/dao/DaoFactory.java
+/home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/db/DataBase.java
+/home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/controller/GoalsController.java
+/home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/db/DbIntegrityException.java
+/home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/module-info.java
+/home/gui/Terapia-Financeira-Desktop/terapia/src/main/java/com/terapia/financeira/model/dao/impl/GoalsDaoJdbc.java
