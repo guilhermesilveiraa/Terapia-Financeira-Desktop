@@ -1,50 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.geometry.Insets?>
 
-<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.terapia.financeira.controller.GoalsController">
-    <padding>
-        <Insets top="20" right="20" bottom="20" left="20" />
-    </padding>
-    <children>
-        <Label text="Inserir Nova Meta" style="-fx-font-size: 20; -fx-font-weight: bold;" />
-        
-        <!-- Campo para Título -->
-        <VBox spacing="5">
-            <Label text="Título:" />
-            <TextField fx:id="txtTitle" promptText="Digite o título da meta" />
-        </VBox>
-        
-        <!-- Campo para Tipo -->
-        <VBox spacing="5">
-            <Label text="Tipo:" />
-            <ComboBox fx:id="cmbType" promptText="Selecione o tipo">
-                <!-- Adicione valores programaticamente ou diretamente no controlador -->
-            </ComboBox>
-        </VBox>
-        
-        <!-- Campo para Valor Total -->
-        <VBox spacing="5">
-            <Label text="Valor Total:" />
-            <TextField fx:id="txtGoalTotalValue" promptText="Digite o valor total" />
-        </VBox>
-        
-        <!-- Campo para Valor Alcançado -->
-        <VBox spacing="5">
-            <Label text="Valor Alcançado:" />
-            <TextField fx:id="txtValueAchieved" promptText="Digite o valor alcançado" />
-        </VBox>
-        
-        <!-- Botões -->
-        <HBox alignment="CENTER" spacing="10">
-            <Button text="Salvar" fx:id="btnSave" onAction="#handleSave" />
-            <Button text="Cancelar" fx:id="btnCancel" onAction="#handleCancel" />
-        </HBox>
-    </children>
-</VBox>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.terapia.financeira.controller.MainController" xmlns="http://javafx.com/javafx/13">
+    <tabs>
+        <!-- Tab: Objetivos -->
+        <Tab closable="false" text="Objetivos">
+            <content>
+                <VBox spacing="10.0" alignment="TOP_LEFT">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                    <Label text="Metas Atuais" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+                    <PieChart fx:id="chartGoalsProgress" prefHeight="200.0" prefWidth="600.0"/>
+                    <!-- Meta 1 -->
+                    <VBox spacing="5.0">
+                        <Label text="Meta 1: Economizar para Viagem" />
+                        <ProgressBar fx:id="progressGoal1" progress="0.6" prefWidth="400.0" />
+                    </VBox>
+                    <!-- Meta 2 -->
+                    <VBox spacing="5.0">
+                        <Label text="Meta 2: Comprar um Carro" />
+                        <ProgressBar fx:id="progressGoal2" progress="0.3" prefWidth="400.0" />
+                    </VBox>
+                    <!-- Botões -->
+                    <HBox spacing="10.0">
+                        <Button text="Inserir Metas" fx:id="btnInserirMetas"/>
+                        <Button text="Custos Fixos" fx:id="btnCustosFixos"/>
+                        <Button text="Custos Variáveis" fx:id="btnCustosVariaveis"/>
+                        <Button text="Rendas" fx:id="btnRendas"/>
+                    </HBox>
+                </VBox>
+            </content>
+        </Tab>
+        <!-- Tab: Inserir Objetivos -->
+        <Tab text="Inserir Objetivos">
+            <content>
+                <VBox spacing="10.0" alignment="TOP_LEFT">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                    <Label text="Adicionar Nova Meta" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+                    <!-- Formulário de entrada -->
+                    <Label text="Descrição da Meta:" />
+                    <TextField fx:id="txtDescricaoMeta" />
+                    <Label text="Progresso Inicial:" />
+                    <TextField fx:id="txtProgressoInicial" />
+                    <Button text="Salvar Meta" fx:id="btnSalvarMeta" />
+                </VBox>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
