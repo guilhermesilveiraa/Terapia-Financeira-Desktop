@@ -38,11 +38,13 @@ public class GoalsController {
     }
 
     @FXML
+    @SuppressWarnings("unused")
     private void initialize() {
         cmbType.getItems().addAll("Curto Prazo", "Médio Prazo", "Longo Prazo");
     }
 
     @FXML
+    @SuppressWarnings({"CallToPrintStackTrace", "unused"})
     private void handleSave() {
         try {
             String title = txtTitle.getText();

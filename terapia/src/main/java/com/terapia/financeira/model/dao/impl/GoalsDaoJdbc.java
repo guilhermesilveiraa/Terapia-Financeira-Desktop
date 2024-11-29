@@ -11,7 +11,7 @@ import com.terapia.financeira.model.dao.GoalsDao;
 import com.terapia.financeira.model.entities.Goals;
 
 public class GoalsDaoJdbc implements GoalsDao {
-    private Connection conn;
+    private final Connection conn;
 
     public GoalsDaoJdbc(Connection conn) {
         this.conn = conn;

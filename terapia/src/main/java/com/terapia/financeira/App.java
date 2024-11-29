@@ -16,10 +16,10 @@ public class App extends Application {
     private static Scene scene;
 
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(@SuppressWarnings("exports") Stage stage) throws IOException {
         // Inicializa a cena com o FXML da tela de inserir objetivo
-        scene = new Scene(loadFXML("insertGoals"), 640, 480);
-        stage.setTitle("Inserir Objetivo"); // Título da janela
+        scene = new Scene(loadFXML("mainScreen"), 800, 680);
+        stage.setTitle("Tela Principal"); // Título da janela
         stage.setScene(scene);
         stage.show();
     }
